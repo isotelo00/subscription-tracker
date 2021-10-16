@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="keywords" content="Our Features &amp; Services" />
+    <meta name="description" content="" />
+    <meta name="page_type" content="np-template-header-footer-from-plugin" />
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" media="screen" />
+    <script
+      class="u-script"
+      type="text/javascript"
+      src="jquery.js"
+      defer=""
+      charset="utf-8"
+    ></script>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
+    <link
+      id="u-theme-google-font"
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+    />
+
+<!-- registration/login.html -->
+
+<body class="body">
+  <div class="about-container">
+    <form method="post" action="user_login/">
+      {% csrf_token %}  
+      
+       <header>Login</header>
+       <label>Username <span>:</span></label>
+       <input type="text"   name="username" placeholder="Username" required="" />
+       <div></div>
+       <label>Password <span>:</span></label>
+       <input type="password"  name="password" placeholder="Password" required="" />
+       <div></div>
+       <button type="submit">Login</button>
+     </form>
+    </div>
+</body>
