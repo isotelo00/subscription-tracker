@@ -14,7 +14,7 @@ body {
 
   font-size: 1rem;
   line-height: 1.6;
-  background: rgb(252, 232, 232);
+  background: rgb(255, 255, 255);
 }
 
 .main-login {
@@ -113,7 +113,7 @@ body {
 
 .header {
   flex: 1 1 auto;
-  background: rgb(252, 231, 231);
+  background: rgb(255, 255, 255);
   border-radius: 10px;
 }
 .header-div {
@@ -143,7 +143,7 @@ body {
   margin-right: 10px;
   margin-top: 5px;
   margin-bottom: 5px;
-  background: #fab59e;
+  background: rgb(213, 247, 255,0.8);
   border-radius: 10px;
 }
 /*.logo-image {
@@ -235,6 +235,7 @@ body {
 .text-about {
   margin-left: 5px;
   margin-right: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .header-about {
@@ -244,7 +245,7 @@ body {
 }
 
 .about-container {
-  background: rgb(227, 111, 111);
+  background: rgba(195, 141, 202, 0.3);
   border-radius: 8px;
   margin-right: 5px;
   margin-left: 5px;
