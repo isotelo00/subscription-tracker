@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.home, name='subscrap-home'),
+    path('create/', views.createSub ),
     #path('Login/', views.login, name='subscrap-login'),
     #path('Signup/', views.signup, name='subscrap-signup'),
     path('', include("django.contrib.auth.urls")),
