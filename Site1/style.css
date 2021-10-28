@@ -28,7 +28,7 @@ body {
 .main-tracker {
   background-color:rgba(255, 242, 242,0.8);
   width: 80%;
-  margin: 5em auto;
+  margin: 3em  auto;
   padding: 2em;
   border-radius: 1.5em;
   display: table-cell; 
@@ -68,11 +68,16 @@ body {
   height: 12px;
   flex: 1 1 auto;
 }
-.div-button {
+.div-header {
+  margin: 1em;
   display: flex;
   flex-direction: row-reverse;
-
 }
+.div-header >a {
+  flex: 1 1 auto;
+}
+
+
 .main-button {
   margin: 1em;
   align-items: center;
@@ -271,8 +276,8 @@ body {
 }*/
 
 .logo-image {
-  width: 200px;
-  height: 200px;
+  width: 128px;
+  height: 128px;
   display: table;
   vertical-align: middle;
   margin-left: auto;
