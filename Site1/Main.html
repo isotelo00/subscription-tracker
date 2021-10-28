@@ -9,14 +9,32 @@
   <meta name="page_type" content="np-template-header-footer-from-plugin" />
   <title>main</title>
   <link rel="stylesheet" href="style.css" media="screen" />
-  <script class="u-script" type="text/javascript" src="jquery.js" defer="" charset="utf-8">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
   </script>
   <link id="u-theme-google-font" rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" />
-
+  <script>
+    $( function() {
+    $( "#subListId" ).sortable();
+  } );
+      //$("#subListId").sortable({
+        //update: function (event, ui) {
+          //getIdsOfSubscriptions();
+        //} //end update         
+      //});
+    
+    //function getIdsOfSubscriptions() {
+     // var values = [];
+      //$('.subscription-article').each(function (index) {
+       // values.push($(this).attr("id")
+        //  .replace("sub", ""));
+     // });
+    //}
+  </script>
 
 <body class="body">
-  
+
   <div class="div-header">
     <button class="main-button">Add</button>
     <button class="main-button">Sort</button>
@@ -25,29 +43,29 @@
       <img src="images/Tracklet-logos_transparent.png" class="logo-image" />
     </a>
   </div>
-  
-  <article class="main-tracker">
+
+  <article class="main-tracker" id="subListId">
     <h1 class="header-name">Your Subscriptions:</h1>
-    <article class="subscription-article">
-      <a href="netflix.com">
+    <article id="sub1" class="subscription-article">
+      <a href="http://netflix.com">
         <img class="sub-image" src="images/netflix.png" />
       </a>
-      <h2>Netflix</h2>
+      <h2>Nssssetflix</h2>
       <p>Expires in 20 days</p>
       <div></div>
       <button>Mute</button>
     </article>
-    <article class="subscription-article">
-      <a href="netflix.com">
+    <article id="sub2" class="subscription-article">
+      <a href="http://netflix.com">
         <img class="sub-image" src="images/netflix.png" />
       </a>
-      <h2>Netflix</h2>
+      <h2>Netflddddix</h2>
       <p>Expires in 20 days</p>
       <div></div>
       <button>Mute</button>
     </article>
-    <article class="subscription-article">
-      <a href="netflix.com">
+    <article id="sub3" class="subscription-article">
+      <a href="http://netflix.com">
         <img class="sub-image" src="images/netflix.png" />
       </a>
       <h2>Netflix</h2>
