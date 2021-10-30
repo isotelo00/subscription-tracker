@@ -27,8 +27,6 @@ class Item(models.Model):
 class SubscriptionList(models.Model):
     # name of List
     listName = models.CharField(max_length=200)
-    # id of user
-    Tempid = models.IntegerField()
     # User
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
@@ -40,6 +38,7 @@ class SubscriptionItem(models.Model):
     SubscriptionList = models.ForeignKey(
         SubscriptionList, on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
+    # id of user, can't use id as a field name unless it is a primary key, so its temporarily just tempid
     Tempid = models.IntegerField()
     startDate = models.DateTimeField(auto_now_add=True)
     expirationDate = models.DateTimeField(default=timezone.now)
