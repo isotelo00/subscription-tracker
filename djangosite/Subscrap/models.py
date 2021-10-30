@@ -1,6 +1,9 @@
 from django.db import models
-
+from django.utils import timezone
+from django.contrib.auth.models import User
 # Create your models here.
+
+# Test code
 
 
 class ToDoList(models.Model):
@@ -18,14 +21,16 @@ class Item(models.Model):
     def __str__(self):
         return self.text
 
+    # Real Code
+
 
 class SubscriptionList(models.Model):
-    # name of person
-    name = models.CharField(max_length=200)
     # name of List
     listName = models.CharField(max_length=200)
-    # id of person
-    id = models.IntegerField(max_length=100)
+    # id of user
+    Tempid = models.IntegerField()
+    # User
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.listName
@@ -35,9 +40,9 @@ class SubscriptionItem(models.Model):
     SubscriptionList = models.ForeignKey(
         SubscriptionList, on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
-    id = models.IntegerField(max_length=100)
-    startDate = models.DateTimeField()
-    expirationDate = models.DateTimeField()
+    Tempid = models.IntegerField()
+    startDate = models.DateTimeField(auto_now_add=True)
+    expirationDate = models.DateTimeField(default=timezone.now)
     postitionInList = models.IntegerField()
     muted = models.BooleanField()
 
