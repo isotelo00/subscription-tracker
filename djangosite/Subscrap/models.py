@@ -39,8 +39,11 @@ class SubscriptionItem(models.Model):
         SubscriptionList, on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
     # id of user, can't use id as a field name unless it is a primary key, so its temporarily just tempid
+    price = models.IntegerField()
+    cycle = models.IntegerField()
     Tempid = models.IntegerField()
     startDate = models.DateTimeField(auto_now_add=True)
+    # set the expiration date
     expirationDate = models.DateTimeField(default=timezone.now)
     postitionInList = models.IntegerField()
     muted = models.BooleanField()
