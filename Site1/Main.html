@@ -15,22 +15,9 @@
   <link id="u-theme-google-font" rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" />
   <script>
-    $( function() {
-    $( "#subListId" ).sortable();
-  } );
-      //$("#subListId").sortable({
-        //update: function (event, ui) {
-          //getIdsOfSubscriptions();
-        //} //end update         
-      //});
-    
-    //function getIdsOfSubscriptions() {
-     // var values = [];
-      //$('.subscription-article').each(function (index) {
-       // values.push($(this).attr("id")
-        //  .replace("sub", ""));
-     // });
-    //}
+    $(function () {
+      $("#subListId").sortable();
+     });
   </script>
 
 <body class="body">
@@ -46,11 +33,11 @@
 
   <article class="main-tracker" id="subListId">
     <h1 class="header-name">Your Subscriptions:</h1>
-    <article id="sub1" class="subscription-article">
+    <article id="sub3" class="subscription-article">
       <a href="http://netflix.com">
         <img class="sub-image" src="images/netflix.png" />
       </a>
-      <h2>Nssssetflix</h2>
+      <h2>Netflix3</h2>
       <p>Expires in 20 days</p>
       <div></div>
       <button>Mute</button>
@@ -59,16 +46,16 @@
       <a href="http://netflix.com">
         <img class="sub-image" src="images/netflix.png" />
       </a>
-      <h2>Netflddddix</h2>
+      <h2>Netflix2</h2>
       <p>Expires in 20 days</p>
       <div></div>
       <button>Mute</button>
     </article>
-    <article id="sub3" class="subscription-article">
+    <article id="sub1" class="subscription-article">
       <a href="http://netflix.com">
         <img class="sub-image" src="images/netflix.png" />
       </a>
-      <h2>Netflix</h2>
+      <h2>Netflix1</h2>
       <p>Expires in 20 days</p>
       <div></div>
       <button>Mute</button>
