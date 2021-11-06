@@ -6,22 +6,22 @@ from django.contrib.auth.models import User
 # Test code
 
 
-class ToDoList(models.Model):
-    name = models.CharField(max_length=200)
+# class ToDoList(models.Model):
+#   name = models.CharField(max_length=200)
 
-    def __str__(self):
-        return self.name
+#  def __str__(self):
+#     return self.name
 
 
-class Item(models.Model):
-    todolist = models.ForeignKey(ToDoList, on_delete=models.CASCADE)
-    text = models.CharField(max_length=300)
-    complete = models.BooleanField()
+# class Item(models.Model):
+#   todolist = models.ForeignKey(ToDoList, on_delete=models.CASCADE)
+#  text = models.CharField(max_length=300)
+# complete = models.BooleanField()
 
-    def __str__(self):
-        return self.text
+# def __str__(self):
+#   return self.text
 
-    # Real Code
+# Real Code
 
 
 class SubscriptionList(models.Model):
@@ -39,13 +39,12 @@ class SubscriptionItem(models.Model):
         SubscriptionList, on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
     # id of user, can't use id as a field name unless it is a primary key, so its temporarily just tempid
-    price = models.IntegerField()
-    cycle = models.IntegerField()
-    Tempid = models.IntegerField()
+    price = models.IntegerField(null=True)
+    cyclePeriod = models.IntegerField(null=True)
     startDate = models.DateTimeField(auto_now_add=True)
     # set the expiration date
-    expirationDate = models.DateTimeField(default=timezone.now)
-    postitionInList = models.IntegerField()
+    expirationDate = models.DateTimeField()
+    postitionInList = models.IntegerField(null=True)
     muted = models.BooleanField()
 
     def __str__(self):

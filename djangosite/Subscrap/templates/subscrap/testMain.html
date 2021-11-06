@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% if items.SubscriptionList.listName %}
+       <title>Subscription List - {{ items.SubscriptionList.listName }}</title>
+    {% else  %}
+        <title>Subscription List</title> 
+    {% endif %}
+        
+</head>
+
+<body>
+<p> {{User}}</p>
+    <ul>
+        {% for item in items%}
+            {% if request.user == item.SubscriptionList.author%}
+                <h2><a class="sub-title" href="{%url 'user-detail-page' item.id%}">{{item.name}}</a></h2>
+                <p>Price: {{item.price}}</p>
+                <p>Cycle: {{item.cyclePeriod}}</p>
+                <p>startDate: {{item.startDate}} </p>
+                <p>expirationDate: {{item.expirationDate}} </p>
+                <p>Muted: {{item.muted}}</p>
+           {% endif %}
+        {%endfor%}
+    </ul> 
+</body>
+</html>

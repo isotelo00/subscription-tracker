@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% if object.SubscriptionList.listName %}
+       <title>Subscription List - {{ object.SubscriptionList.listName }}</title>
+    {% else  %}
+        <title>Subscription List</title> 
+    {% endif %}
+        
+</head>
+
+<body>
+<p> {{User}}</p>
+    <ul>
+        <h2>Details of {{object.name}}</h2>
+        <p>Price: {{object.price}}</p>
+        <p>Cycle: {{object.cyclePeriod}}</p>
+        <p>startDate: {{object.startDate}} </p>
+        <p>expirationDate: {{object.expirationDate}} </p>
+        <p>Muted: {{object.muted}}</p>
+    </ul> 
+</body>
+</html>

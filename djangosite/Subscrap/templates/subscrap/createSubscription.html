@@ -1,0 +1,33 @@
+<!--<!DOCTYPE html> 
+<html lang="en">
+
+<body>
+	<div>
+		<form action="/create/" method="post">
+			{% csrf_token %}
+			<label for="create">Add a new subscription: </label> <br>
+			<label for="sub_name">Subscription Name: </label>
+			<input id="sub_name" type="text" name="sub_name"> <br>
+			<label for="sub_price">Subscription price: </label>
+			<input id="sub_price" type="number" step=".01" name="sub_price"> <br>
+			<label for="sub_date">Subscription date: </label>
+			<input id="sub_date" type="date" name="sub_date"> <br>
+            <label for="sub_cycle">Subscription Cycle: </label>
+			<input id="sub_cycle" type="number" name="sub_cycle"> <br>
+            <label for="sub_muted">Subscription Muted: </label>
+			<input id="sub_muted" type="boolean" name="sub_muted"> <br>
+-->
+											<!--this should redirect to the sub list once made-->
+		<!--	<input type="button" id="cancel" value="cancel" onclick="window.location.href='testMain/'">
+			<input type="submit" value="OK">
+		</form>
+	</div>
+</body>
+</html>-->
+{% block title %}Create an Subscription{% endblock %} {% load crispy_forms_tags %}
+{%block content %}
+<form method="POST" class="form-group">
+  {%csrf_token%} {{form|crispy}}
+  <button type="submit" class="btn btn-success">Create</button>
+</form>
+{%endblock%}
