@@ -7,6 +7,7 @@ from .views import SubscriptionPostView, SubscriptionDetailView, SubscriptionCre
 urlpatterns = [
     path('', views.home, name='subscrap-home'),
     path('create/', views.createSub),
+    path('edit/', views.editSub),
     #path('testMain/', views.testMain),
     path('testMain/', SubscriptionPostView.as_view(), name='user-page'),
     path('sub/<int:pk>/', SubscriptionDetailView.as_view(), name='user-detail-page'),

@@ -2,14 +2,14 @@
 <html lang="en">
 
 <header>
-	
+
 </header>
 
 <body>
 	<div>
-		<form action="/create/" method="post">
+		<form action="/edit/" method="post">
 			{% csrf_token %}
-			<label for="create">Add a new subscription: </label> <br>
+			<label for="create">Edit your subscription: </label> <br>
 			<label for="sub_name">Subscription Name: </label>
 			<input id="sub_name" type="text" name="sub_name"> <br>
 			<label for="sub_price">Subscription price: </label>
@@ -21,7 +21,7 @@
 
 											<!--this should redirect to the sub list once made-->
 			<input type="button" id="cancel" value="cancel" onclick="window.location.href='/'">
-			<input type="submit" value="Add">
+			<input type="submit" value="Edit">
 		</form>
 	</div>
 </body>

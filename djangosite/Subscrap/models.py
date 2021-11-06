@@ -1,4 +1,6 @@
 from django.db import models
+from django.db.models.base import Model
+from django.db.models.fields import AutoField
 from django.utils import timezone
 from django.contrib.auth.models import User
 # Create your models here.
@@ -36,16 +38,16 @@ class SubscriptionList(models.Model):
 
 class SubscriptionItem(models.Model):
     SubscriptionList = models.ForeignKey(
-        SubscriptionList, on_delete=models.CASCADE)
+        SubscriptionList, on_delete=models.CASCADE, null=True)
     name = models.CharField(max_length=200)
     # id of user, can't use id as a field name unless it is a primary key, so its temporarily just tempid
-    price = models.IntegerField(null=True)
-    cyclePeriod = models.IntegerField(null=True)
+    price = models.DecimalField(decimal_places=2,max_digits=6)
+    cyclePeriod = models.IntegerField(default=1)
     startDate = models.DateTimeField(auto_now_add=True)
     # set the expiration date
     expirationDate = models.DateTimeField()
     postitionInList = models.IntegerField(null=True)
-    muted = models.BooleanField()
+    muted = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
